@@ -1,12 +1,9 @@
-﻿double W = double.Parse(Console.ReadLine());
-double H = double.Parse(Console.ReadLine());
-double wT = double.Parse(Console.ReadLine());   
-double hT = double.Parse(Console.ReadLine());
+﻿double depositAmount = double.Parse(Console.ReadLine());
+int depositInMounth = int.Parse(Console.ReadLine());  
+double interestRate = double.Parse(Console.ReadLine());
 
-double bathroomArea = W * H;
-double addSurplus = bathroomArea * 0.1;
-double totalBatharea = bathroomArea + addSurplus;
-double tillArea = wT * hT;
-double tilesNeeded = totalBatharea/tillArea;
+double accumulatedInterest = depositAmount * interestRate / 100;
+double interestForMonth = accumulatedInterest / 12;
+double totalAmount = depositAmount + depositInMounth * interestForMonth;
 
-Console.WriteLine($"{tilesNeeded:F0}");
+Console.WriteLine($"{totalAmount:F2}");
