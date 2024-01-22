@@ -1,12 +1,12 @@
-﻿double tomatoePrice = double.Parse(Console.ReadLine());
-double tomatoeQuanty = double.Parse(Console.ReadLine()); 
-double cucumberPrice = double.Parse(Console.ReadLine());
-double cucumberQuanty = double.Parse(Console.ReadLine());
+﻿double W = double.Parse(Console.ReadLine());
+double H = double.Parse(Console.ReadLine());
+double wT = double.Parse(Console.ReadLine());   
+double hT = double.Parse(Console.ReadLine());
 
-double tomatoes = tomatoePrice * tomatoeQuanty;
-double cucumber = cucumberPrice * cucumberQuanty;   
+double bathroomArea = W * H;
+double addSurplus = bathroomArea * 0.1;
+double totalBatharea = bathroomArea + addSurplus;
+double tillArea = wT * hT;
+double tilesNeeded = totalBatharea/tillArea;
 
-double totalCost = tomatoes + cucumber;
-
-Console.WriteLine($"{totalCost:F2}");
-
+Console.WriteLine($"{tilesNeeded:F0}");
