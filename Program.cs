@@ -1,8 +1,14 @@
-﻿int numberOfPage = int.Parse(Console.ReadLine());
-int pagesReadPerHour = int.Parse(Console.ReadLine());
-int numberOfDays = int.Parse(Console.ReadLine());
+﻿int numberOfPackagesOfPens = int.Parse(Console.ReadLine());
+int numberOfPacketOfMarkers = int.Parse(Console.ReadLine());    
+int litersOfBoardCleaner = int.Parse(Console.ReadLine());   
+int disqountPercent  = int.Parse(Console.ReadLine());
 
-int totalReadingTime = numberOfPage / pagesReadPerHour;
-int requeredPerDay =totalReadingTime / numberOfDays;
+double priceForPens = numberOfPackagesOfPens * 5.80;
+double priceForMarker = numberOfPacketOfMarkers * 7.20;
+double priceForBoardCleaner = litersOfBoardCleaner * 1.20;
 
-Console.WriteLine(requeredPerDay);
+double priceForAllMaterials = priceForPens + priceForMarker + priceForBoardCleaner;
+;
+double priceAfterDisqount = priceForAllMaterials - (priceForAllMaterials * disqountPercent /100);
+
+Console.WriteLine(priceAfterDisqount);
