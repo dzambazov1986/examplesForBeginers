@@ -1,9 +1,8 @@
-﻿double depositAmount = double.Parse(Console.ReadLine());
-int depositInMounth = int.Parse(Console.ReadLine());  
-double interestRate = double.Parse(Console.ReadLine());
+﻿int numberOfPage = int.Parse(Console.ReadLine());
+int pagesReadPerHour = int.Parse(Console.ReadLine());
+int numberOfDays = int.Parse(Console.ReadLine());
 
-double accumulatedInterest = depositAmount * interestRate / 100;
-double interestForMonth = accumulatedInterest / 12;
-double totalAmount = depositAmount + depositInMounth * interestForMonth;
+int totalReadingTime = numberOfPage / pagesReadPerHour;
+int requeredPerDay =totalReadingTime / numberOfDays;
 
-Console.WriteLine($"{totalAmount:F2}");
+Console.WriteLine(requeredPerDay);
